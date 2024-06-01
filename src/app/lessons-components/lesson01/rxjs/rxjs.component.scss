@@ -1,0 +1,12 @@
+@import "../../../../template";
+
+body {
+  font-family: $font-stack;
+}
+
+button {
+  margin: 10px;
+}
+.button-red {
+  background-color: $primary-color-red;
+}

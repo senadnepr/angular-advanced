@@ -1,0 +1,26 @@
+<h1>Comments</h1>
+
+<button class="button" (click)="actionGetAllComments()">Subscribed</button>
+<button class="button" (click)="actionGetAllCommentsAsync()">Async pipe</button>
+<button class="button-red" (click)="actionError()">Error</button>
+
+<ng-container *ngIf="comments">
+<h2>Subscribed</h2>
+<p *ngFor="let comment of comments">
+  {{ comment.body }}
+</p>
+</ng-container>
+
+<ng-container *ngIf="$comments | async as data">
+<h2>Async pipe</h2>
+  <p *ngFor="let dataItem of data">
+    {{ dataItem.body }}
+  </p>
+</ng-container>
+
+<div *ngIf="error">
+  <h2>Error</h2>
+  <p>{{error}}</p>
+</div>
+
+<app-comments-checker></app-comments-checker>
