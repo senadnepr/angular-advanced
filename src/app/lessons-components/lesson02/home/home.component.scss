@@ -1,0 +1,13 @@
+@use "template";
+
+a.articles{
+  font-family: template.$font-stack;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+//a.articles:hover{
+//  background-color: lightgray;
+//}
+a.articles:active{
+  background-color: lightgray;
+}

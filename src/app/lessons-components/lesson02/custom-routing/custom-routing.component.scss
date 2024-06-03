@@ -1,0 +1,16 @@
+@import "template";
+
+a {
+  padding: 20px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: blue;
+}
+
+div.menu {
+  background-color: lightgray;
+  height: 40px;
+  align-content: center;
+}

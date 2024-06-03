@@ -1,12 +1,13 @@
-@import "../../../../template";
+//@import "template";
+@use "template";
 
 body {
-  font-family: $font-stack;
+  font-family: template.$font-stack;
 }
 
 button {
   margin: 10px;
 }
 .button-red {
-  background-color: $primary-color-red;
+  background-color: template.$primary-color-red;
 }

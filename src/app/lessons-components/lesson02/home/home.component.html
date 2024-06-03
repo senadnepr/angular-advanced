@@ -1,0 +1,12 @@
+<div class="menu">
+  <a class="articles" [routerLink]="['/custom-routing/home', 1]" routerLinkActive="active">Новини на сьогодні</a>
+  <a class="articles" [routerLink]="['/custom-routing/home', 7]" routerLinkActive="active">Новини тижневі</a>
+  <a class="articles" [routerLink]="['/custom-routing/home', 10]" routerLinkActive="active">Новини всі</a>
+</div>
+
+<ng-container *ngIf="comments">
+  <p *ngFor="let comment of comments">
+    {{ comment.body }}
+  </p>
+</ng-container>
+

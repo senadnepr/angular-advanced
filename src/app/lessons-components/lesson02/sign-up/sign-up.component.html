@@ -1,0 +1,13 @@
+<h2>Авторизация</h2>
+
+<div>
+<label for="email">E-mail</label>
+<input id="email" type="email" [(ngModel)]="email">
+<br>
+<label for="password">Password</label>
+<input id="password" type="password" [(ngModel)]="password">
+</div>
+
+<button (click)="login()">Войти</button>
+
+<div [hidden] = "isHidden">Вітаємо!</div>
