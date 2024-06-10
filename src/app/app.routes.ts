@@ -9,10 +9,9 @@ import {AboutComponent} from "./lessons-components/lesson02/about/about.componen
 import {ProductsComponent} from "./lessons-components/lesson02/products/products.component";
 import {PricingComponent} from "./lessons-components/lesson02/pricing/pricing.component";
 import {SignUpComponent} from "./lessons-components/lesson02/sign-up/sign-up.component";
-import {ContactsComponent} from "./lessons-components/lesson02/about/contacts/contacts.component";
-import {InfoComponent} from "./lessons-components/lesson02/about/info/info.component";
-import {CommonModule} from "@angular/common";
-import {isLoggedGuard, isSignInGuard} from "./is-logged.guard";
+import {isLoggedGuard} from "./is-logged.guard";
+import {Lesson03Module} from "./lessons-components/lesson03/lesson03-module/lesson03.module";
+
 
 export const routes: Routes = [
   {
@@ -60,13 +59,17 @@ export const routes: Routes = [
       {
         path: 'sign-up',
         component: SignUpComponent,
-        canDeactivate: [isSignInGuard]
+        canDeactivate: [isLoggedGuard]
       },
     ]
   },
   {
-    path: 'modules',
-    component: Modules
+    path: 'modules', loadComponent: () =>
+      import('./lessons-components/lesson03/modules/modules.component')
+        .then((m) => m.Modules),
+    loadChildren: () => import('./lessons-components/lesson03/lesson03-module/lesson03.module')
+      .then((m) => m.Lesson03Module)
+
   },
   {
     path: "", redirectTo: "rxjs", pathMatch: 'full'

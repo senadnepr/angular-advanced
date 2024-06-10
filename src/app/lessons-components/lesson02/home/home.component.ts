@@ -3,6 +3,7 @@ import {CommentsService, IComment} from "../../../common-services/comments.servi
 import {filter, map, Observable, of, Subscription, tap} from "rxjs";
 import {NgForOf, NgIf} from "@angular/common";
 import {ActivatedRoute, ParamMap, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {Lesson03Module} from "../../lesson03/lesson03-module/lesson03.module";
 
 @Component({
   selector: 'home',
@@ -12,7 +13,8 @@ import {ActivatedRoute, ParamMap, RouterLink, RouterLinkActive, RouterOutlet} fr
     NgIf,
     RouterLink,
     RouterLinkActive,
-    RouterOutlet
+    RouterOutlet,
+    Lesson03Module
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

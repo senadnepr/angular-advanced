@@ -1,8 +1,13 @@
 <h1>Comments</h1>
 
-<button class="button" (click)="actionGetAllComments()">Subscribed</button>
-<button class="button" (click)="actionGetAllCommentsAsync()">Async pipe</button>
+<!--<button mat-button class="button" (click)="actionGetAllComments()">Subscribed</button>-->
+<!--<button mat-button color="primary" (click)="actionGetAllComments()">Subscribed</button>-->
+<p-button label="Subscribed" (click)="actionGetAllComments()"/>
+<button (click)="actionGetAllCommentsAsync()">Async pipe</button>
 <button class="button-red" (click)="actionError()">Error</button>
+<button class="button" (click)="of123()">of123</button>
+<button class="button" (click)="from123()">from123</button>
+<button class="button" (click)="concat()">concat</button>
 
 <ng-container *ngIf="comments">
 <h2>Subscribed</h2>
@@ -24,3 +29,17 @@
 </div>
 
 <app-comments-checker></app-comments-checker>
+
+<ng-container *ngIf="result">
+  <h2>RxJS Marbles</h2>
+  <p>{{function}}</p>
+  <p *ngFor="let dataItem of result">
+    {{ dataItem }}
+  </p>
+</ng-container>
+
+<ng-container *ngIf="number">
+  <h2>RxJS Marbles</h2>
+  <p>{{function}}</p>
+  <p>{{number}}</p>
+</ng-container>
