@@ -1,13 +1,11 @@
 <h1>Comments</h1>
 
-<!--<button mat-button class="button" (click)="actionGetAllComments()">Subscribed</button>-->
-<!--<button mat-button color="primary" (click)="actionGetAllComments()">Subscribed</button>-->
-<p-button label="Subscribed" (click)="actionGetAllComments()"/>
-<button (click)="actionGetAllCommentsAsync()">Async pipe</button>
-<button class="button-red" (click)="actionError()">Error</button>
-<button class="button" (click)="of123()">of123</button>
-<button class="button" (click)="from123()">from123</button>
-<button class="button" (click)="concat()">concat</button>
+<button mat-raised-button color="primary" (click)="actionGetAllComments()">Subscribed</button>
+<button mat-raised-button color="primary"  (click)="actionGetAllCommentsAsync()">Async pipe</button>
+<button mat-raised-button color="warn"  (click)="actionError()">Error</button>
+<button mat-raised-button color="primary"  (click)="of123()">of123</button>
+<button mat-raised-button color="primary"  (click)="from123()">from123</button>
+<button mat-raised-button color="primary"  (click)="concat()">concat</button>
 
 <ng-container *ngIf="comments">
 <h2>Subscribed</h2>

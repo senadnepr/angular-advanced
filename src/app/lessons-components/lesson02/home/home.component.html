@@ -4,9 +4,6 @@
   <a class="articles" [routerLink]="['/custom-routing/home', 10]" routerLinkActive="active">Новини всі</a>
 </div>
 
-<app-standalone></app-standalone>
-<app-notstandalone></app-notstandalone>
-
 <ng-container *ngIf="comments">
   <p *ngFor="let comment of comments">
     {{ comment.body | mycapitalize }}
