@@ -1,17 +1,15 @@
-import {RouterModule, Routes} from '@angular/router';
-import {NgModule} from "@angular/core";
-import {EmptyRoute} from "./common-components/empty-route/empty-route.component";
+// import {RouterModule, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
+// import {NgModule} from "@angular/core";
 import {Rxjs} from "./lessons-components/lesson01/rxjs/rxjs.component";
-import {Modules} from "./lessons-components/lesson03/modules/modules.component";
 import {CustomRouting} from "./lessons-components/lesson02/custom-routing/custom-routing.component";
 import {HomeComponent} from "./lessons-components/lesson02/home/home.component";
-import {AboutComponent} from "./lessons-components/lesson02/about/about.component";
 import {ProductsComponent} from "./lessons-components/lesson02/products/products.component";
 import {PricingComponent} from "./lessons-components/lesson02/pricing/pricing.component";
+import {AboutComponent} from "./lessons-components/lesson02/about/about.component";
 import {SignUpComponent} from "./lessons-components/lesson02/sign-up/sign-up.component";
 import {isLoggedGuard} from "./is-logged.guard";
-import {Lesson03Module} from "./lessons-components/lesson03/lesson03-module/lesson03.module";
-
+import {EmptyRoute} from "./common-components/empty-route/empty-route.component";
 
 export const routes: Routes = [
   {
@@ -80,10 +78,10 @@ export const routes: Routes = [
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-
-export class AppRoutingModule {
-}
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule]
+// })
+//
+// export class AppRoutingModule {
+// }

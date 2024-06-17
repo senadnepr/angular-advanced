@@ -1,24 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CommentsService, IComment} from "../../../common-services/comments.service";
-import {
-  concat,
-  filter,
-  from,
-  interval,
-  map,
-  Observable,
-  of, range,
-  Subscription,
-  take,
-  tap
+import {concat, filter, from, interval, map, Observable, of, range, Subscription, take,  tap
 } from "rxjs";
 import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
 import {CommentsCheckerComponent} from "../comments-checker/comments-checker.component";
 import {MatButtonModule} from '@angular/material/button';
-import { ButtonModule } from 'primeng/button';
-import { ConfirmationService } from 'primeng/api';
 import {FormsModule} from "@angular/forms";
-import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'rxjs',
@@ -29,13 +16,10 @@ import { InputTextModule } from 'primeng/inputtext';
     NgIf,
     CommentsCheckerComponent,
     MatButtonModule,
-    ButtonModule,
     FormsModule,
-    InputTextModule
   ],
   templateUrl: './rxjs.component.html',
   styleUrl: './rxjs.component.scss',
-  providers: [ConfirmationService],
 })
 export class Rxjs implements OnDestroy, OnInit {
 
