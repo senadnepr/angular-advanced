@@ -6,6 +6,7 @@ import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
 import {CommentsCheckerComponent} from "../comments-checker/comments-checker.component";
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from "@angular/forms";
+import {ButtonCustomComponent} from "../../../custom-ui/button-custom/button-custom.component";
 
 @Component({
   selector: 'rxjs',
@@ -17,6 +18,7 @@ import {FormsModule} from "@angular/forms";
     CommentsCheckerComponent,
     MatButtonModule,
     FormsModule,
+    ButtonCustomComponent,
   ],
   templateUrl: './rxjs.component.html',
   styleUrl: './rxjs.component.scss',

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
   selector: 'navigations',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './navigations.component.html',
   styleUrl: './navigations.component.scss'
