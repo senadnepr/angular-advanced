@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'button-custom',
@@ -9,10 +9,10 @@ import {Component, Input} from '@angular/core';
 })
 export class ButtonCustomComponent {
 
-@Input()
-  customClick: Function | null = click();
+  @Output() click = new EventEmitter();
 
-  handleClick(){
-    this.customClick();
+  public onClick(event: Event)
+  {
+    this.click.emit(event);
   }
 }
